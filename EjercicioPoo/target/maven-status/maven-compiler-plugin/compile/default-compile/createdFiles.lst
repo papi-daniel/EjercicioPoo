@@ -1,0 +1,13 @@
+com\mycompany\ejerciciopoo\models\Estudiante.class
+Services\CursosInscritos.class
+com\mycompany\ejerciciopoo\models\Inscripcion.class
+com\mycompany\ejerciciopoo\models\Persona.class
+com\mycompany\ejerciciopoo\models\CursoProfesor.class
+Services\InscripcionesPersonas.class
+com\mycompany\ejerciciopoo\models\Facultad.class
+Interfaces\Servicios.class
+com\mycompany\ejerciciopoo\models\Curso.class
+com\mycompany\ejerciciopoo\models\Profesor.class
+com\mycompany\ejerciciopoo\Main.class
+Services\CursosProfesores.class
+com\mycompany\ejerciciopoo\models\Programa.class
