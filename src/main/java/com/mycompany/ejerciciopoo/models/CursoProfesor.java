@@ -19,5 +19,23 @@ public class CursoProfesor implements Serializable {
     public String toString() {
         return "CursoProfesor[" + "\n\t    profesor = " + profesor.toString() + "\t    anio = " + anio + ",\n\t    semestre = " + semestre + ",\n\t    curso = " + curso.toString() + "]";
     }
+
+    public Profesor getProfesor() {
+        return profesor;
+    }
+
+    public int getAnio() {
+        return anio;
+    }
+
+    public int getSemestre() {
+        return semestre;
+    }
+
+    public Curso getCurso() {
+        return curso;
+    }
+
+    
     
 }

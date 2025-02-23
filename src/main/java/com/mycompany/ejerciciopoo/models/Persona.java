@@ -25,6 +25,25 @@ public class Persona implements Serializable{
         return ID;
     }
 
+    
+    public String getNombre() {
+        return nombre;
+    }
+
+
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+
+
+    public String getEmail() {
+        return email;
+    }
+
+
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -36,6 +55,7 @@ public class Persona implements Serializable{
     public void setEmail(String email) {
         this.email = email;
     }
-     
+    
+
     
 }

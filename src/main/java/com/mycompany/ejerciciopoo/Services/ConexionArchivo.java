@@ -30,6 +30,9 @@ public class ConexionArchivo {
     }
 
     public <T> T obtenerDatos(String clave, Class<T> tipo) {
-        return tipo.cast(datos.get(clave));
-    }
+        Object objeto = datos.get(clave);
+        if (objeto != null && tipo.isInstance(objeto)) {
+            return tipo.cast(objeto);
+        }
+        return null;    }
 }

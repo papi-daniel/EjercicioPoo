@@ -16,14 +16,15 @@ import utils.ConfigurationStorage;
 
 public class AlmacenamientoBinario implements Almacenamiento {
 
+    private final String ARCHIVO = ConfigurationStorage.nombreArchivo;
 
     public AlmacenamientoBinario(){}
 
     @Override
     public void guardarDatos(Map<String, Object> datos) {
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(ConfigurationStorage.nombreArchivo))) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(ARCHIVO))) {
             oos.writeObject(datos);
-            System.out.println("\bDatos guardados en el archivo "+ ConfigurationStorage.nombreArchivo);
+            System.out.println("Datos guardados en el archivo "+ ARCHIVO);
         } catch (IOException e) {
            e.printStackTrace();
         }
@@ -31,10 +32,10 @@ public class AlmacenamientoBinario implements Almacenamiento {
 
     @Override
     public Map<String, Object> cargarDatos() {
-        File file = new File(ConfigurationStorage.nombreArchivo);
+        File file = new File(ARCHIVO);
         if (!file.exists()) return new HashMap<>();
 
-        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(ConfigurationStorage.nombreArchivo))) {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(ARCHIVO))) {
             return (Map<String, Object>) ois.readObject();
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
